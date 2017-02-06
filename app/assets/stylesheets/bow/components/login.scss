@@ -1,0 +1,105 @@
+.login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $BLACK;
+  overflow: hidden;
+
+  &--logo {
+    padding: 20px;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    background-color: #1391c1;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border: 3px solid #fff;
+    box-shadow: inset 0px 0px 0px 5px #32bafa;
+  }
+
+  &--content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 400px;
+    background-color: $WHITE;
+    padding: 60px;
+    border-radius: 5px;
+  }
+}
+
+.water {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background: #32bafa;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+
+  &--inner {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+
+  &--wave {
+    width: 200%;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+
+    &-back {
+      fill: $BLUE;
+      -webkit-animation: wave-back 5s infinite linear;
+              animation: wave-back 5s infinite linear;
+    }
+
+    &-front {
+      left: 0;
+      fill: #32bafa;
+      -webkit-animation: wave-front 3s infinite linear;
+              animation: wave-front 3s infinite linear;
+    }
+  }
+}
+
+@-webkit-keyframes wave-front {
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@keyframes wave-front {
+  100% {
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+
+@-webkit-keyframes wave-back {
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}
+
+@keyframes wave-back {
+  100% {
+    -webkit-transform: translate(50%, 0);
+            transform: translate(50%, 0);
+  }
+}

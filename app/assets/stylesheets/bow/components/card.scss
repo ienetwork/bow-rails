@@ -1,0 +1,84 @@
+.card {
+  padding: 20px;
+  border-radius: 5px;
+  background-color: $WHITE;
+  border-bottom: 1px solid #e5e5e5;
+
+  &-raised {
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+
+  &-expandable {
+    .card--face {
+      cursor: pointer;
+    }
+
+    .card--content {
+      display: none;
+    }
+  }
+
+  &--face {
+    display: flex;
+    align-items: center;
+
+    &--title {
+      font-size: $FONT_LARGE;
+      margin-right: 30px;
+    }
+
+    &--status {
+      margin: auto 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 16px;
+      background-color: $BLACK;
+      color: $WHITE;
+
+      &.green { background-color: $GREEN }
+      &.red { background-color: $RED }
+      &.blue { background-color: $BLUE }
+      &.yellow { background-color: $YELLOW }
+    }
+
+    &--meta {
+      display: flex;
+      margin-right: 20px;
+
+      &--item {
+        display: block;
+        padding: 7px 10px;
+        border: 1px solid #e5e5e5;
+        margin-left: -1px;
+
+        &:first-child {
+          border-radius: 3px 0 0 3px;
+        }
+        &:last-child {
+          border-radius: 0 3px 3px 0;
+        }
+
+        label {
+          display: block;
+          margin-bottom: 5px;
+          font-style: italic;
+          color: $GRAY;
+        }
+
+        span {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &--content {
+    margin: 30px 0 0 50px;
+  }
+}

@@ -1,0 +1,30 @@
+.zero_state {
+  min-height: 300px;
+  position: relative;
+
+  &--content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    .fa {
+      font-size: 40px;
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      margin-bottom: 20px;
+      background-color: #e5e5e5;
+      color: $WHITE;
+      border-radius: 100%;
+    }
+
+    p {
+      font-size: $FONT_LARGE;
+      font-weight: 500;
+      color: $GRAY;
+    }
+  }
+}

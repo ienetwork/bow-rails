@@ -1,0 +1,43 @@
+.header {
+  background-color: $BLUE;
+  padding: 0 20px;
+  margin-bottom: 40px;
+
+  &--link {
+    color: $WHITE;
+    text-decoration: none;
+    padding: 33px 15px;
+    font-weight: 500;
+
+    &.active {
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        border-bottom: 10px solid #fff;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  #logo {
+    margin: 15px;
+  }
+}
+
+#logo {
+  background-image: url('http://ixn.s3.amazonaws.com/brand/logo_full.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 50px;
+}

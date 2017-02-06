@@ -1,0 +1,28 @@
+.user_pill {
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $BLACK;
+
+  &-light {
+    color: $WHITE;
+  }
+
+  &--avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 100%;
+    background-color: $WHITE;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 40px;
+    color: $BLACK;
+  }
+
+  &--name {
+    margin-left: 10px;
+  }
+}

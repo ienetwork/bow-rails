@@ -1,0 +1,26 @@
+.tabs {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 40px;
+
+  a {
+    display: block;
+    padding: 15px 20px 10px;
+    background: $WHITE;
+    border-radius: 3px 3px 0 0;
+    margin-right: 10px;
+    opacity: 0.7;
+    transition: opacity .2s;
+    color: $BLACK;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 0.9;
+      transition: opacity .2s;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

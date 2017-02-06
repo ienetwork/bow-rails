@@ -1,0 +1,47 @@
+.btn {
+  text-decoration: none;
+  border-radius: 3px;
+  background-color: $BLACK;
+  color: $WHITE;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  padding: 12px 20px;
+  font-weight: 500;
+  border: none;
+  line-height: 1;
+  font-size: $FONT_REGULAR;
+
+  &-sm {
+    padding: 7px 10px;
+    font-size: $FONT_SMALL;
+  }
+  &-full {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  &-blue { background-color: $BLUE }
+  &-green { background-color: $GREEN }
+  &-yellow { background-color: $YELLOW }
+  &-red { background-color: $RED }
+}
+
+.btn_group {
+  display: flex;
+
+  .btn {
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &:last-child {
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}

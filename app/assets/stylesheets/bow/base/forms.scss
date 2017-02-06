@@ -1,0 +1,60 @@
+input, textarea, select {
+  -webkit-font-smoothing: antialiased;
+  color: $BLACK;
+  font-size: 14px;
+}
+
+input[type='text'], input[type='number'], input[type='password'], input[type='date'], textarea {
+  border-radius: 3px;
+  background-color: $WHITE;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+
+  &:focus {
+    border-color: $BLUE;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  min-height: 200px;
+}
+
+select {
+  height: 39px;
+
+  &:focus {
+    border: 1px solid $BLUE;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+label {
+  font-size: $FONT_SMALL;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.field {
+  margin-bottom: 30px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+
+    input {
+      width: auto;
+    }
+  }
+  input, textarea, select {
+    width: 100%;
+  }
+}
