@@ -7,8 +7,8 @@
   width: 90%;
   margin: 0 auto 40px;
 
-  &-success, &.notice { background-color: $GREEN }
-  &-warning, &.alert { background-color: $YELLOW }
+  &-success, &.success { background-color: $GREEN }
+  &-warning, &.warning { background-color: $YELLOW }
   &-error, &.error { background-color: $RED }
-  &-info { background-color: $BLUE }
+  &-info, &.info { background-color: $BLUE }
 }
