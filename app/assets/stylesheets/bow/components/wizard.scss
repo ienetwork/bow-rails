@@ -1,0 +1,281 @@
+.wizard--container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.wizard--buttons {
+  margin-top: 60px;
+}
+.wizard--progress {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 60px;
+}
+  .wizard--progress-item {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    padding-top: 40px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+    .wizard--progress-item:after {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-color: #e5e5e5;
+      border-radius: 100%;
+      border: 4px solid #fff;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin: 0px 0 0 -12px;
+    }
+    .wizard--progress-item:before {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #e5e5e5;
+      position: absolute;
+      top: 11px;
+      left: 50%;
+    }
+      .wizard--progress-item:last-child:before {
+        display: none;
+      }
+
+  .wizard--progress-item.current {
+    color: #222;
+  }
+    .wizard--progress-item.current:after {
+      background-color: $GREEN;
+    }
+
+  .wizard--progress-item.complete:after {
+    content: '\f00c';
+    font: normal normal normal 14px/1 FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .wizard--progress-item.complete:after,
+  .wizard--progress-item.complete:before {
+    background-color: $GREEN;
+  }
+
+.wizard--screens {
+  position: relative;
+  margin: 0 40px;
+}
+  .wizard--screen {
+    display: none;
+  }
+  .wizard--screen.current {
+    display: block;
+  }
+    .wizard--screen--description {
+      font-size: 30px;
+      margin: 80px 0 80px;
+      line-height: 1.3em;
+      font-weight: 600;
+    }
+    .wizard--screen--info {
+      font-size: 14px;
+      color: #777;
+      font-weight: 400;
+      margin-bottom: 80px;
+      padding: 15px;
+      background: #f5f5f5;
+      border-radius: 4px;
+      border: 1px solid #e5e5e5;
+      line-height: 1;
+      margin: 15px 0;
+    }
+      .wizard--screen--info:before {
+        content: "\f05a";
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-size: 18px;
+        color: #ccc;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+
+.wizard--field {
+  margin-bottom: 40px;
+}
+  .wizard--field label {
+    text-transform: none;
+    font-size: 16px;
+    letter-spacing: 0px;
+    display: block;
+    margin-bottom: 10px;
+    color: #777;
+  }
+    .wizard--field.invalid label {
+      color: $RED;
+    }
+    .wizard--field.invalid input:invalid,
+    .wizard--field.invalid select:invalid {
+      border-color: $RED !important;
+    }
+    .wizard--field.invalid input[type='text'],
+    .wizard--field.invalid input[type='number'],
+    .wizard--field.invalid input[type='email'] {
+      border-color: $RED;
+    }
+  .wizard--field input,
+  .wizard--field select {
+    width: 100%;
+    font-size: 18px;
+    padding: 15px;
+  }
+  .wizard--field select {
+    height: 53px;
+  }
+  .wizard--field input:invalid,
+  .wizard--field input:invalid:focus {
+    border-color: #e5e5e5;
+  }
+
+  label.wizard--checkbox {
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    width: 23%;
+    margin: 2% 2% 2% 0;
+    display: block;
+    cursor: pointer;
+    line-height: 24px;
+    font-size: 14px;
+  }
+    .wizard--checkbox input {
+      -webkit-appearance: none;
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      border-radius: 100%;
+      border: 1px solid #e5e5e5;
+      vertical-align: middle;
+      margin: 0 5px 0 0;
+      padding: 0;
+      outline: none;
+      box-shadow: none;
+    }
+      .wizard--checkbox input:checked {
+        border-color: $GREEN;
+        background-color: $GREEN;
+        color: #fff;
+        outline: none;
+        box-shadow: none;
+      }
+        .wizard--checkbox input:checked:before {
+          content: '\f00c';
+          font: normal normal normal 14px/1 FontAwesome;
+          -webkit-font-smoothing: antialiased;
+          font-size: 14px;
+          padding: 5px;
+          color: #fff;
+        }
+
+  input.wizard--file-upload {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: none;
+    font-size: 14px;
+    cursor: pointer;
+  }
+    input.wizard--file-upload:active {
+      outline: none;
+      box-shadow: none;
+    }
+
+.wizard--product-group {
+  margin-bottom: 80px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+.wizard--product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+  .wizard--product label {
+    width: 50%;
+    text-transform: none;
+    font-size: 16px;
+    letter-spacing: 0px;
+  }
+  .wizard--product select {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .wizard--product input {
+    text-align: center;
+  }
+  .wizard--product i {
+    margin: 0 20px;
+    color: #ccc;
+  }
+  .wizard--product .subtotal {
+    margin-right: 0;
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+    .wizard--product .subtotal:before {
+      content: '$';
+    }
+  .wizard--product--total {
+    text-align: right;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e5e5;
+    display: flex;
+    align-items: center;
+  }
+    .wizard--product--total label {
+      font-size: 16px;
+      text-transform: none;
+      letter-spacing: 0px;
+      margin-left: auto;
+      margin-right: 10px;
+      margin-bottom: 0;
+      color: #999;
+    }
+    .wizard--product--total div {
+      font-size: 24px;
+      font-weight: 600;
+      width: 110px;
+      display: flex;
+      align-items: center;
+    }
+      .wizard--product--total div:before {
+        content: '$';
+        margin-left: auto;
+      }
+      .wizard--product--total div input {
+        margin-left: 5px;
+        margin-right: -10px;
+        font-weight: 600;
+        font-size: 24px;
+        padding: 5px 10px;
+      }
