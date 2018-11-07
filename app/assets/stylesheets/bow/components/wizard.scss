@@ -97,6 +97,9 @@
       border: 1px solid #e5e5e5;
       line-height: 1;
       margin: 15px 0;
+      position: relative;
+      padding-left: 40px;
+      line-height: 1.4em;
     }
       .wizard--screen--info:before {
         content: "\f05a";
@@ -109,6 +112,9 @@
         color: #ccc;
         margin-right: 5px;
         vertical-align: middle;
+        position: absolute;
+        top: 15px;
+        left: 15px;
       }
 
 .wizard--field {
