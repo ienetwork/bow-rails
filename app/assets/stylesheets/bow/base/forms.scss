@@ -4,7 +4,7 @@ input, textarea, select {
   font-size: 14px;
 }
 
-input[type='text'], input[type='number'], input[type='password'], input[type='date'], textarea {
+input[type='text'], input[type='number'], input[type='password'], input[type='date'], input[type='email'], textarea {
   border-radius: 3px;
   background-color: $WHITE;
   border: 1px solid #e5e5e5;
