@@ -51,3 +51,11 @@
 .width-100 { width: 100% }
 
 .hidden { display: none }
+
+.bg--gradient {
+  background: $BLUE;
+  background: -moz-linear-gradient(-45deg, $BLUE 0%, $GREEN 100%);
+  background: -webkit-linear-gradient(-45deg, $BLUE 0%,$GREEN 100%);
+  background: linear-gradient(135deg, $BLUE 0%,$GREEN 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$BLUE', endColorstr='$GREEN',GradientType=1 );
+}

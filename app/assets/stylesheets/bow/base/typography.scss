@@ -20,6 +20,7 @@ strong { font-weight: 600 }
 
 h1, h2, h3, h5 {
   color: $BLACK;
+  font-family: Quicksand;
 
   p {
     margin: 10px 0 30px;
@@ -31,6 +32,7 @@ h1, h2, h3, h5 {
 
 h1 {
   font-size: $FONT_XLARGE;
+  font-weight: 500;
   margin-bottom: 40px;
 }
 h2 {
